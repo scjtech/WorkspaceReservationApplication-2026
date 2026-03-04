@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="workspace_description" label="Workspace Description" language="en" table="x_746154_workspa_0_workspace_options">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>workspace_description</element>
+            <help/>
+            <hint/>
+            <label>Workspace Description</label>
+            <language>en</language>
+            <name>x_746154_workspa_0_workspace_options</name>
+            <plural>Workspace Descriptions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-04 00:44:01</sys_created_on>
+            <sys_id>916b9b53c31f72109f0231cc05013194</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Workspace Description</sys_name>
+            <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
+            <sys_update_name>sys_documentation_x_746154_workspa_0_workspace_options_workspace_description_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-04 00:44:01</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
