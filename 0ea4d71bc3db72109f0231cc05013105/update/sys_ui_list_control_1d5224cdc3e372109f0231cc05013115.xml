@@ -15,7 +15,7 @@
         <list_edit_insert_row>false</list_edit_insert_row>
         <list_edit_ref_qual_tag/>
         <list_edit_type/>
-        <name>x_746154_workspa_0_reservation_tracker</name>
+        <name>x_746154_workspa_0_workspace_options</name>
         <new_condition/>
         <new_roles/>
         <omit_columns_if_empty>false</omit_columns_if_empty>
@@ -29,21 +29,21 @@
         <omit_links>false</omit_links>
         <omit_new_button>true</omit_new_button>
         <omit_related_list_count>false</omit_related_list_count>
-        <related_list/>
+        <related_list>x_746154_workspa_0_reservation_tracker.workspace</related_list>
         <sys_class_name>sys_ui_list_control</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-03-07 05:32:03</sys_created_on>
+        <sys_created_on>2026-03-08 21:46:02</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>bb893f90c3ebb2109f0231cc050131b0</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>x_746154_workspa_0_reservation_tracker</sys_name>
+        <sys_id>1d5224cdc3e372109f0231cc05013115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_746154_workspa_0_workspace_options</sys_name>
         <sys_overrides display_value="">global</sys_overrides>
         <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
         <sys_policy/>
         <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
-        <sys_update_name>sys_ui_list_control_bb893f90c3ebb2109f0231cc050131b0</sys_update_name>
+        <sys_update_name>sys_ui_list_control_1d5224cdc3e372109f0231cc05013115</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-08 22:13:51</sys_updated_on>
+        <sys_updated_on>2026-03-08 21:46:02</sys_updated_on>
     </sys_ui_list_control>
 </record_update>
