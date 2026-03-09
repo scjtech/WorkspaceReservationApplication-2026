@@ -31,10 +31,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>0a9b7584c32f32109f0231cc050131cc</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-06 01:43:14</sys_updated_on>
-            <value>pending_checkin</value>
+            <sys_updated_on>2026-03-09 05:09:45</sys_updated_on>
+            <value>pending_check_in</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -111,10 +111,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>740c7584c32f32109f0231cc050131d6</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-06 01:43:26</sys_updated_on>
-            <value>no-show</value>
+            <sys_updated_on>2026-03-09 07:12:48</sys_updated_on>
+            <value>no_show</value>
         </sys_choice>
     </sys_choice>
 </record_update>

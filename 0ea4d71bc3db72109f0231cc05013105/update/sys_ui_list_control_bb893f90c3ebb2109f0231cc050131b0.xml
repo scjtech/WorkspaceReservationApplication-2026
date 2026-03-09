@@ -27,7 +27,7 @@
         <omit_filters>false</omit_filters>
         <omit_if_empty>false</omit_if_empty>
         <omit_links>false</omit_links>
-        <omit_new_button>true</omit_new_button>
+        <omit_new_button>false</omit_new_button>
         <omit_related_list_count>false</omit_related_list_count>
         <related_list/>
         <sys_class_name>sys_ui_list_control</sys_class_name>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bb893f90c3ebb2109f0231cc050131b0</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>x_746154_workspa_0_reservation_tracker</sys_name>
         <sys_overrides display_value="">global</sys_overrides>
         <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
@@ -44,6 +44,6 @@
         <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
         <sys_update_name>sys_ui_list_control_bb893f90c3ebb2109f0231cc050131b0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-08 22:13:51</sys_updated_on>
+        <sys_updated_on>2026-03-09 20:14:48</sys_updated_on>
     </sys_ui_list_control>
 </record_update>
