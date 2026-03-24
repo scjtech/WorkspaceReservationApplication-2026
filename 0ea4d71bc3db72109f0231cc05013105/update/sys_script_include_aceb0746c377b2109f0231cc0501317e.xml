@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_746154_workspa_0.discordNotification</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>A script to send notifications to Discord</description>
+        <mobile_callable>false</mobile_callable>
+        <name>discordNotification</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var discordNotification = Class.create();
+discordNotification.prototype = {
+    initialize: function() {
+        // Get webhook URL from system property
+        this.webhookURL = gs.getProperty('x_746154_workspa_0.discord.webhook_url');
+    },
+
+    sendMessage: function(message, emoji) {
+        // Don't send if webhook not configured
+        if (!this.webhookURL) {
+            gs.warn('Discord webhook URL not configured');
+            return false;
+        }
+        try {
+            var request = new sn_ws.RESTMessageV2();
+            request.setEndpoint(this.webhookURL);
+
+            request.setHttpMethod('POST');
+            request.setRequestHeader('Content-Type', 'application/json');
+
+            // Build Discord message payload
+
+            var payload = {
+                content: (emoji ? emoji + ' ' : '') + message
+            };
+            request.setRequestBody(JSON.stringify(payload));
+            var response = request.execute();
+            var httpStatus = response.getStatusCode();
+            if (httpStatus == 200 || httpStatus == 204) {
+                gs.info('Discord notification sent successfully');
+                return true;
+            } else {
+                gs.error('Discord notification failed with status: ' +
+                    httpStatus);
+                return false;
+            }
+        } catch (ex) {
+            gs.error('Error sending Discord notification: ' + ex.message);
+            return false;
+        }
+    },
+
+    type: 'discordNotification'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-24 23:20:02</sys_created_on>
+        <sys_id>aceb0746c377b2109f0231cc0501317e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>discordNotification</sys_name>
+        <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
+        <sys_update_name>sys_script_include_aceb0746c377b2109f0231cc0501317e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-24 23:40:50</sys_updated_on>
+    </sys_script_include>
+</record_update>
