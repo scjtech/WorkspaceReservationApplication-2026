@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.reservation_status == 'pending_check_in' &amp;&amp; gs.hasRole("wrm_agent") &amp;&amp; current.start_date_time &lt; new GlideDateTime ()</condition>
+        <condition>current.reservation_status == 'pending_check_in' &amp;&amp; gs.hasRole("x_746154_workspa_0.wrm_agent") &amp;&amp; current.start_date_time &lt; new GlideDateTime ()</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -44,7 +44,7 @@ action.setRedirectURL(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c6cb92cdc36f72109f0231cc050131e8</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>No Show </sys_name>
         <sys_overrides/>
         <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
@@ -52,7 +52,7 @@ action.setRedirectURL(current);]]></script>
         <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
         <sys_update_name>sys_ui_action_c6cb92cdc36f72109f0231cc050131e8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-09 07:17:19</sys_updated_on>
+        <sys_updated_on>2026-03-29 06:57:55</sys_updated_on>
         <table>x_746154_workspa_0_reservation_tracker</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

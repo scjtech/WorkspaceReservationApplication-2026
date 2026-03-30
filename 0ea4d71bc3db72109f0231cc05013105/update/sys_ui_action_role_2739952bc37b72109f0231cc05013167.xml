@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action_role">
+    <sys_ui_action_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ui_action_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-29 06:25:30</sys_created_on>
+        <sys_id>2739952bc37b72109f0231cc05013167</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Check In .x_746154_workspa_0.wrm_agent</sys_name>
+        <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
+        <sys_ui_action display_value="Check In ">ef3cf945c3eb72109f0231cc05013123</sys_ui_action>
+        <sys_update_name>sys_ui_action_role_2739952bc37b72109f0231cc05013167</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-29 06:25:30</sys_updated_on>
+        <sys_user_role display_value="x_746154_workspa_0.wrm_agent" name="x_746154_workspa_0.wrm_agent">96a4d71bc3db72109f0231cc0501310f</sys_user_role>
+    </sys_ui_action_role>
+</record_update>
