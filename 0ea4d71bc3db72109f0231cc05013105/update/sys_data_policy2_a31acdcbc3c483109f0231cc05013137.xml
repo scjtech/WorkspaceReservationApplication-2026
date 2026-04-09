@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_data_policy2">
+    <sys_data_policy2 action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <apply_import_set>true</apply_import_set>
+        <apply_soap>true</apply_soap>
+        <conditions/>
+        <description>Enforce that the following fields are always read-only: Workspace name, Workspace type, Location, Max occupancy.&#13;
+b. Read-only enforcement works across all interfaces (UI, import, web service).&#13;
+c. Fields cannot be modified after initial creation.</description>
+        <enforce_ui>true</enforce_ui>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table>x_746154_workspa_0_workspace_options</model_table>
+        <reverse_if_false>true</reverse_if_false>
+        <short_description>Workspace Options - Field Data Integrity</short_description>
+        <sys_class_name>sys_data_policy2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-09 03:07:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a31acdcbc3c483109f0231cc05013137</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Workspace Options - Field Data Integrity</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
+        <sys_update_name>sys_data_policy2_a31acdcbc3c483109f0231cc05013137</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-09 03:07:26</sys_updated_on>
+    </sys_data_policy2>
+</record_update>

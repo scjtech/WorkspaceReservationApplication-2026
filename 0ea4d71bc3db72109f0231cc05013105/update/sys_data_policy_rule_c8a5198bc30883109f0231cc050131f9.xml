@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>true</disabled>
+        <field>workspace_name</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-09 03:08:29</sys_created_on>
+        <sys_data_policy display_value="Workspace Options - Field Data Integrity">a31acdcbc3c483109f0231cc05013137</sys_data_policy>
+        <sys_id>c8a5198bc30883109f0231cc050131f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>workspace_name</sys_name>
+        <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
+        <sys_update_name>sys_data_policy_rule_c8a5198bc30883109f0231cc050131f9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-09 03:08:29</sys_updated_on>
+        <table>x_746154_workspa_0_workspace_options</table>
+    </sys_data_policy_rule>
+</record_update>
