@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Share+Tech+Mono&amp;family=DM+Sans:wght@300;400;500&amp;display=swap');&#13;
+&#13;
+.nx-page { background: #08080f; color: #f0ecff; font-family: 'DM Sans', sans-serif; min-height: 100vh; }&#13;
+&#13;
+/* NAV */&#13;
+.nx-nav {&#13;
+  display: flex; justify-content: space-between; align-items: center;&#13;
+  padding: 0 60px; height: 68px;&#13;
+  border-bottom: 1px solid rgba(184,122,255,0.12);&#13;
+  background: rgba(8,8,15,0.95);&#13;
+  position: sticky; top: 0; z-index: 100;&#13;
+}&#13;
+.nx-logo { font-family: 'Syne', sans-serif; font-size: 1.45rem; font-weight: 800; color: #f0ecff; letter-spacing: 0.04em; }&#13;
+.nx-logo span { color: #b87aff; text-shadow: 0 0 24px rgba(184,122,255,0.5); }&#13;
+.nx-nav-links { display: flex; gap: 36px; }&#13;
+.nx-nav-links a {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.9rem; letter-spacing: 0.14em; text-transform: uppercase;&#13;
+  color: rgba(240,236,255,0.55); text-decoration: none; transition: color 0.3s;&#13;
+}&#13;
+.nx-nav-links a:hover { color: #b87aff; text-decoration: none; }&#13;
+&#13;
+/* HERO SMALL */&#13;
+.nx-hero {&#13;
+  padding: 60px 60px 50px; position: relative;&#13;
+  overflow: hidden; background: #08080f;&#13;
+  border-bottom: 1px solid rgba(184,122,255,0.12);&#13;
+}&#13;
+.nx-hero-sm { padding: 48px 60px 40px; }&#13;
+.nx-hero-grid {&#13;
+  position: absolute; inset: 0;&#13;
+  background-image:&#13;
+    linear-gradient(rgba(184,122,255,0.04) 1px, transparent 1px),&#13;
+    linear-gradient(90deg, rgba(184,122,255,0.04) 1px, transparent 1px);&#13;
+  background-size: 48px 48px; pointer-events: none;&#13;
+}&#13;
+.nx-hero::before {&#13;
+  content: ''; position: absolute;&#13;
+  width: 600px; height: 400px; border-radius: 50%;&#13;
+  background: radial-gradient(circle, rgba(184,122,255,0.07) 0%, transparent 65%);&#13;
+  top: -150px; right: -80px; pointer-events: none;&#13;
+}&#13;
+.nx-hero-content { position: relative; z-index: 2; max-width: 680px; }&#13;
+.nx-eyebrow {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.85rem; letter-spacing: 0.28em; color: #b87aff;&#13;
+  text-transform: uppercase; margin-bottom: 16px;&#13;
+  display: flex; align-items: center; gap: 12px;&#13;
+}&#13;
+.nx-eyebrow::before {&#13;
+  content: ''; display: inline-block; width: 20px; height: 1px;&#13;
+  background: #b87aff; opacity: 0.6;&#13;
+}&#13;
+.nx-hero h1 {&#13;
+  font-family: 'Syne', sans-serif; font-size: 3.2rem;&#13;
+  font-weight: 800; line-height: 1.05; color: #f0ecff; margin-bottom: 16px;&#13;
+}&#13;
+.nx-accent { color: #b87aff; text-shadow: 0 0 32px rgba(184,122,255,0.45); }&#13;
+.nx-dot { color: #ffb899; }&#13;
+.nx-sub { font-size: 1rem; color: rgba(240,236,255,0.55); font-weight: 300; line-height: 1.75; }&#13;
+/* STATS ROW */&#13;
+.nx-res-stats {&#13;
+  display: grid; grid-template-columns: repeat(4, 1fr);&#13;
+  gap: 16px; padding: 32px 60px 0; background: #08080f;&#13;
+}&#13;
+.nx-res-stat-card {&#13;
+  background: #0e0c1a; border: 1px solid rgba(184,122,255,0.12);&#13;
+  border-radius: 12px; padding: 24px 28px;&#13;
+  transition: border-color 0.3s;&#13;
+}&#13;
+.nx-res-stat-card:hover { border-color: rgba(184,122,255,0.3); }&#13;
+.nx-res-stat-label {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;&#13;
+  color: rgba(240,236,255,0.35); display: block; margin-bottom: 10px;&#13;
+}&#13;
+.nx-res-stat-num {&#13;
+  font-family: 'Syne', sans-serif; font-size: 2.4rem;&#13;
+  font-weight: 800; line-height: 1; display: block;&#13;
+}&#13;
+.nx-col-green  { color: #7fffb2; text-shadow: 0 0 20px rgba(127,255,178,0.4); }&#13;
+.nx-col-purple { color: #b87aff; text-shadow: 0 0 20px rgba(184,122,255,0.4); }&#13;
+.nx-col-peach  { color: #ffb899; text-shadow: 0 0 20px rgba(255,184,153,0.4); }&#13;
+.nx-col-white  { color: #f0ecff; }&#13;
+&#13;
+/* RESERVATIONS SECTION */&#13;
+.nx-res-section { padding: 32px 60px 60px; background: #08080f; }&#13;
+.nx-section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }&#13;
+.nx-tag {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;&#13;
+  color: #b87aff; background: rgba(184,122,255,0.14);&#13;
+  border: 1px solid rgba(184,122,255,0.24); padding: 5px 14px; border-radius: 3px;&#13;
+}&#13;
+.nx-section-line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(184,122,255,0.12), transparent); }&#13;
+.nx-section-count { font-family: 'Share Tech Mono', monospace; font-size: 0.82rem; color: rgba(240,236,255,0.28); }&#13;
+&#13;
+/* EMPTY STATE */&#13;
+.nx-empty {&#13;
+  text-align: center; padding: 80px 40px;&#13;
+  border: 1px solid rgba(184,122,255,0.12);&#13;
+  border-radius: 12px; background: #0e0c1a;&#13;
+}&#13;
+.nx-empty-icon { font-size: 3rem; display: block; margin-bottom: 16px; }&#13;
+.nx-empty-text { font-size: 1rem; color: rgba(240,236,255,0.4); margin-bottom: 28px; }&#13;
+&#13;
+/* BUTTON */&#13;
+.nx-btn-primary {&#13;
+  display: inline-flex; align-items: center; gap: 10px;&#13;
+  background: transparent; border: 1.5px solid #b87aff; color: #b87aff;&#13;
+  font-family: 'Share Tech Mono', monospace; font-size: 0.85rem;&#13;
+  letter-spacing: 0.18em; text-transform: uppercase;&#13;
+  padding: 15px 32px; border-radius: 4px; text-decoration: none; transition: all 0.3s;&#13;
+}&#13;
+.nx-btn-primary:hover { background: rgba(184,122,255,0.14); color: #b87aff; text-decoration: none; }&#13;
+/* RESERVATIONS TABLE */&#13;
+.nx-res-table-wrap {&#13;
+  overflow-x: auto;&#13;
+  border: 1px solid rgba(184,122,255,0.12);&#13;
+  border-radius: 12px; background: #0e0c1a;&#13;
+}&#13;
+.nx-res-table {&#13;
+  width: 100%; border-collapse: collapse;&#13;
+  font-size: 0.88rem;&#13;
+}&#13;
+.nx-res-table thead tr {&#13;
+  border-bottom: 1px solid rgba(184,122,255,0.15);&#13;
+  background: rgba(184,122,255,0.06);&#13;
+}&#13;
+.nx-res-table th {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.7rem; letter-spacing: 0.2em;&#13;
+  text-transform: uppercase; color: rgba(240,236,255,0.35);&#13;
+  padding: 16px 20px; text-align: left; font-weight: 400;&#13;
+}&#13;
+.nx-res-row {&#13;
+  border-bottom: 1px solid rgba(255,255,255,0.04);&#13;
+  transition: background 0.2s;&#13;
+}&#13;
+.nx-res-row:last-child { border-bottom: none; }&#13;
+.nx-res-row:hover { background: rgba(184,122,255,0.05); }&#13;
+.nx-res-table td { padding: 16px 20px; vertical-align: middle; }&#13;
+.nx-res-num {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.82rem; color: #b87aff;&#13;
+  text-decoration: none; letter-spacing: 0.05em;&#13;
+  transition: opacity 0.2s;&#13;
+}&#13;
+.nx-res-num:hover { opacity: 0.7; text-decoration: none; }&#13;
+.nx-res-workspace { color: #f0ecff; font-weight: 500; }&#13;
+.nx-res-date {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.78rem; color: rgba(240,236,255,0.5);&#13;
+}&#13;
+.nx-res-location { color: rgba(240,236,255,0.55); font-size: 0.85rem; }&#13;
+&#13;
+/* STATUS BADGES */&#13;
+.nx-res-badge {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.65rem; letter-spacing: 0.12em;&#13;
+  text-transform: uppercase; padding: 4px 12px;&#13;
+  border-radius: 3px; border: 1px solid; white-space: nowrap;&#13;
+}&#13;
+.nx-badge-av   { color: #7fffb2; border-color: rgba(127,255,178,0.25); background: rgba(127,255,178,0.07); }&#13;
+.nx-badge-un   { color: #ff6b6b; border-color: rgba(255,107,107,0.25); background: rgba(255,107,107,0.07); }&#13;
+.nx-badge-done { color: #b87aff; border-color: rgba(184,122,255,0.25); background: rgba(184,122,255,0.07); }&#13;
+&#13;
+/* FOOTER */&#13;
+.nx-footer {&#13;
+  border-top: 1px solid rgba(184,122,255,0.12);&#13;
+  padding: 24px 60px; display: flex;&#13;
+  justify-content: space-between; align-items: center;&#13;
+  background: #08080f;&#13;
+}&#13;
+.nx-footer-logo { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: rgba(240,236,255,0.28); }&#13;
+.nx-footer-logo span { color: #b87aff; }&#13;
+.nx-footer-copy { font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; color: rgba(240,236,255,0.28); letter-spacing: 0.15em; }&#13;
+&#13;
+/* RESPONSIVE */&#13;
+@media (max-width: 900px) {&#13;
+  .nx-nav, .nx-hero, .nx-res-stats, .nx-res-section, .nx-footer { padding-left: 20px; padding-right: 20px; }&#13;
+  .nx-res-stats { grid-template-columns: repeat(2, 1fr); }&#13;
+  .nx-hero h1 { font-size: 2.4rem; }&#13;
+}&#13;
+@media (max-width: 600px) {&#13;
+  .nx-res-stats { grid-template-columns: 1fr; }&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>nexspace-my-reservations</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>NexSpace My Reservations</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.catalogItemId = '2ab07725c3eb32109f0231cc050131f6';
+
+    // Get logged in user's reservations
+    var reservations = [];
+    var gr = new GlideRecord('x_746154_workspa_0_reservation_tracker');
+    gr.addQuery('reserved_for', gs.getUserID());
+    gr.orderByDesc('start_date_time');
+    gr.query();
+
+    while (gr.next()) {
+        reservations.push({
+            number:            gr.getDisplayValue('number'),
+            workspace:         gr.getDisplayValue('workspace'),
+            status:            gr.getDisplayValue('reservation_status'),
+            state:             gr.getDisplayValue('state'),
+            startDate:         gr.getDisplayValue('start_date_time'),
+            endDate:           gr.getDisplayValue('end_date_time'),
+            location:          gr.getDisplayValue('location'),
+            sysId:             gr.getUniqueValue()
+        });
+    }
+
+    data.reservations  = reservations;
+    data.totalCount    = reservations.length;
+    data.userName      = gs.getUser().getFirstName() || gs.getUserDisplayName();
+
+    // Count by status
+    var active = 0, completed = 0, cancelled = 0;
+    for (var i = 0; i < reservations.length; i++) {
+        var s = reservations[i].status.toLowerCase().replace(/ /g, '_');
+        if (s === 'pending_check_in' || s === 'checked_in') active++;
+        else if (s === 'checked_out') completed++;
+        else if (s === 'cancelled' || s === 'no_show') cancelled++;
+    }
+    data.activeCount    = active;
+    data.completedCount = completed;
+    data.cancelledCount = cancelled;
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-13 06:12:07</sys_created_on>
+        <sys_id>bb15ea50c39c03109f0231cc050131e6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>NexSpace My Reservations</sys_name>
+        <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
+        <sys_update_name>sp_widget_bb15ea50c39c03109f0231cc050131e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-13 06:26:53</sys_updated_on>
+        <template><![CDATA[<div class="nx-page">
+
+  <!-- NAV -->
+  <nav class="nx-nav">
+    <div class="nx-logo">Nex<span>Space</span></div>
+    <div class="nx-nav-links">
+      <a href="/nexspace">Home</a>
+      <a href="/nexspace?id=sc_cat_item&sys_id={{data.catalogItemId}}">Reserve</a>
+      <a href="/nexspace?id=kb_home">Knowledge</a>
+      <a href="/nexspace?id=ticket_form&table=incident">Support</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="nx-hero nx-hero-sm">
+    <div class="nx-hero-grid"></div>
+    <div class="nx-hero-content">
+      <p class="nx-eyebrow">My Workspace Activity</p>
+      <h1>My <span class="nx-accent">Reservations</span><span class="nx-dot">.</span></h1>
+      <p class="nx-sub">Track and manage all your workspace reservations in one place.</p>
+    </div>
+  </section>
+
+  <!-- STATS ROW -->
+  <section class="nx-res-stats">
+    <div class="nx-res-stat-card">
+      <span class="nx-res-stat-label">Active</span>
+      <span class="nx-res-stat-num nx-col-green">{{data.activeCount}}</span>
+    </div>
+    <div class="nx-res-stat-card">
+      <span class="nx-res-stat-label">Completed</span>
+      <span class="nx-res-stat-num nx-col-purple">{{data.completedCount}}</span>
+    </div>
+    <div class="nx-res-stat-card">
+      <span class="nx-res-stat-label">Cancelled / No Show</span>
+      <span class="nx-res-stat-num nx-col-peach">{{data.cancelledCount}}</span>
+    </div>
+    <div class="nx-res-stat-card">
+      <span class="nx-res-stat-label">Total</span>
+      <span class="nx-res-stat-num nx-col-white">{{data.totalCount}}</span>
+    </div>
+  </section>
+
+  <!-- RESERVATIONS TABLE -->
+  <section class="nx-res-section">
+    <div class="nx-section-header">
+      <span class="nx-tag">All Reservations</span>
+      <div class="nx-section-line"></div>
+      <span class="nx-section-count">{{data.totalCount}} Records</span>
+    </div>
+
+    <!-- Empty state -->
+    <div class="nx-empty" ng-if="data.reservations.length === 0">
+      <span class="nx-empty-icon">]]>📋<![CDATA[</span>
+      <p class="nx-empty-text">You have no reservations yet.</p>
+      <a href="/nexspace?id=sc_cat_item&sys_id={{data.catalogItemId}}" class="nx-btn-primary">Reserve a Workspace →</a>
+    </div>
+
+    <!-- Table -->
+    <div class="nx-res-table-wrap" ng-if="data.reservations.length > 0">
+      <table class="nx-res-table">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Workspace</th>
+            <th>Status</th>
+            <th>Start Date/Time</th>
+            <th>End Date/Time</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="res in data.reservations" class="nx-res-row">
+            <td>
+              <a href="/nexspace?id=form&table=x_746154_workspa_0_reservation_tracker&sys_id={{res.sysId}}"
+                 class="nx-res-num">{{res.number}}</a>
+            </td>
+            <td class="nx-res-workspace">{{res.workspace}}</td>
+            <td>
+              <span class="nx-res-badge" ng-class="{
+                'nx-badge-av':  res.status === 'Pending Check-In' || res.status === 'Checked-In',
+                'nx-badge-un':  res.status === 'No-Show' || res.status === 'Cancelled',
+                'nx-badge-done':res.status === 'Checked-Out'
+              }">{{res.status}}</span>
+            </td>
+            <td class="nx-res-date">{{res.startDate}}</td>
+            <td class="nx-res-date">{{res.endDate}}</td>
+            <td class="nx-res-location">{{res.location}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="nx-footer">
+    <div class="nx-footer-logo">Nex<span>Space</span></div>
+    <div class="nx-footer-copy">Workspace Reservation Management · Built on ServiceNow</div>
+  </footer>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

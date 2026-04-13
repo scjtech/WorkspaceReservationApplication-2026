@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Share+Tech+Mono&amp;family=DM+Sans:wght@300;400;500&amp;display=swap');&#13;
+&#13;
+.nx-hero {&#13;
+  padding: 80px 60px 72px;&#13;
+  position: relative;&#13;
+  overflow: hidden;&#13;
+  background: #08080f;&#13;
+  border-bottom: 1px solid rgba(184,122,255,0.12);&#13;
+}&#13;
+.nx-hero-grid {&#13;
+  position: absolute; inset: 0;&#13;
+  background-image:&#13;
+    linear-gradient(rgba(184,122,255,0.04) 1px, transparent 1px),&#13;
+    linear-gradient(90deg, rgba(184,122,255,0.04) 1px, transparent 1px);&#13;
+  background-size: 48px 48px;&#13;
+  pointer-events: none;&#13;
+}&#13;
+.nx-hero::before {&#13;
+  content: ''; position: absolute;&#13;
+  width: 700px; height: 500px; border-radius: 50%;&#13;
+  background: radial-gradient(circle, rgba(184,122,255,0.08) 0%, transparent 65%);&#13;
+  top: -160px; right: -100px; pointer-events: none;&#13;
+}&#13;
+.nx-hero::after {&#13;
+  content: ''; position: absolute;&#13;
+  width: 360px; height: 360px; border-radius: 50%;&#13;
+  background: radial-gradient(circle, rgba(255,184,153,0.05) 0%, transparent 65%);&#13;
+  bottom: -80px; left: 80px; pointer-events: none;&#13;
+}&#13;
+.nx-hero-content {&#13;
+  position: relative; z-index: 2;&#13;
+  max-width: 680px;&#13;
+  animation: nxFadeUp 0.7s ease both;&#13;
+}&#13;
+.nx-eyebrow {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.68rem; letter-spacing: 0.35em;&#13;
+  color: #b87aff; text-transform: uppercase;&#13;
+  margin-bottom: 22px; display: flex;&#13;
+  align-items: center; gap: 12px;&#13;
+}&#13;
+.nx-eyebrow::before {&#13;
+  content: ''; display: inline-block;&#13;
+  width: 20px; height: 1px;&#13;
+  background: #b87aff; opacity: 0.6;&#13;
+}&#13;
+.nx-hero h1 {&#13;
+  font-family: 'Syne', sans-serif;&#13;
+  font-size: 4.4rem; font-weight: 800;&#13;
+  line-height: 1.05; color: #f0ecff;&#13;
+  margin-bottom: 22px;&#13;
+}&#13;
+.nx-accent {&#13;
+  color: #b87aff;&#13;
+  text-shadow: 0 0 32px rgba(184,122,255,0.45);&#13;
+}&#13;
+.nx-dot { color: #ffb899; }&#13;
+.nx-sub {&#13;
+  font-size: 1rem; color: rgba(240,236,255,0.55);&#13;
+  font-weight: 300; max-width: 460px;&#13;
+  line-height: 1.75; margin-bottom: 42px;&#13;
+}&#13;
+.nx-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }&#13;
+.nx-btn-primary {&#13;
+  display: inline-flex; align-items: center; gap: 10px;&#13;
+  background: transparent;&#13;
+  border: 1.5px solid #b87aff; color: #b87aff;&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.75rem; letter-spacing: 0.18em;&#13;
+  text-transform: uppercase; padding: 15px 32px;&#13;
+  border-radius: 4px; text-decoration: none;&#13;
+  transition: all 0.3s;&#13;
+  box-shadow: 0 0 18px rgba(184,122,255,0.1);&#13;
+}&#13;
+.nx-btn-primary:hover {&#13;
+  background: rgba(184,122,255,0.14);&#13;
+  box-shadow: 0 0 32px rgba(184,122,255,0.25);&#13;
+  color: #b87aff; text-decoration: none;&#13;
+  transform: translateY(-1px);&#13;
+}&#13;
+.nx-btn-ghost {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.7rem; letter-spacing: 0.15em;&#13;
+  text-transform: uppercase; color: rgba(240,236,255,0.28);&#13;
+  text-decoration: none; transition: color 0.3s;&#13;
+}&#13;
+.nx-btn-ghost:hover { color: rgba(240,236,255,0.55); text-decoration: none; }&#13;
+@keyframes nxFadeUp {&#13;
+  from { opacity: 0; transform: translateY(20px); }&#13;
+  to   { opacity: 1; transform: translateY(0); }&#13;
+}&#13;
+@media (max-width: 768px) {&#13;
+  .nx-hero { padding: 48px 24px; }&#13;
+  .nx-hero h1 { font-size: 2.6rem; }&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>nexspace-hero</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>NexSpace Hero</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  // Catalog item sys_id for Reserve a Workspace
+  // Replace this with your actual catalog item sys_id
+  data.catalogItemId = '2ab07725c3eb32109f0231cc050131f6';
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-11 05:48:31</sys_created_on>
+        <sys_id>474d48b7c34083109f0231cc050131e5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>NexSpace Hero</sys_name>
+        <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
+        <sys_update_name>sp_widget_474d48b7c34083109f0231cc050131e5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-12 20:03:32</sys_updated_on>
+        <template><![CDATA[<div class="nx-hero">
+  <div class="nx-hero-grid"></div>
+  <div class="nx-hero-content">
+    <p class="nx-eyebrow">Workspace Reservation System</p>
+    <h1>Your <span class="nx-accent">Perfect</span><br>Space Awaits<span class="nx-dot">.</span></h1>
+    <p class="nx-sub">Discover and reserve premium workspaces designed for focus, collaboration, and creativity.</p>
+    <div class="nx-actions">
+      <a href="/nexspace?id=sc_cat_item&sys_id={{data.catalogItemId}}" class="nx-btn-primary">Reserve a Workspace →</a>
+      <a href="#nx-carousel" class="nx-btn-ghost">Browse spaces ↓</a>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>
