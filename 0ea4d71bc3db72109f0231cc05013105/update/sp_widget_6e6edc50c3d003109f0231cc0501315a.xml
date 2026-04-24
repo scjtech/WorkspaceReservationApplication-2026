@@ -565,11 +565,7 @@
     data.catalogItemId = '2ab07725c3eb32109f0231cc050131f6';
 
     // ── GREETING ─────────────────────────────────
-    var gdt = new GlideDateTime();
-    var hour = parseInt(gdt.getLocalTime().getValue().substring(0, 2));
-    if (hour < 12) data.greeting = 'Good Morning';
-    else if (hour < 17) data.greeting = 'Good Afternoon';
-    else data.greeting = 'Good Evening';
+    data.greeting = 'Hello';
     data.userName = gs.getUser().getFirstName() || gs.getUserDisplayName();
 
     // ── MY ACTIVE RESERVATIONS COUNT ─────────────
@@ -655,12 +651,12 @@
         });
     }
     if (articles.length === 0) {
-        articles = [
-            { title: 'Cancellation Policy',       sysId: '' },
-            { title: 'Reservation Confirmations', sysId: '' },
-            { title: 'Maintenance Issues',         sysId: '' }
-        ];
-    }
+    articles = [
+        { title: 'Cancellation Policy',       sysId: 'f7f24ae3c3d043109f0231cc05013158' },
+        { title: 'Reservation Confirmations', sysId: '7a0586a7c3d043109f0231cc0501318a' },
+        { title: 'Maintenance Issues',         sysId: 'bf9b02efc3d043109f0231cc0501319a' }
+    ];
+}
     data.articles = articles;
 
 })();]]></script>
@@ -669,14 +665,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-04-12 20:20:01</sys_created_on>
         <sys_id>6e6edc50c3d003109f0231cc0501315a</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Nexspace Homepage</sys_name>
         <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
         <sys_policy/>
         <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
         <sys_update_name>sp_widget_6e6edc50c3d003109f0231cc0501315a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-13 05:20:08</sys_updated_on>
+        <sys_updated_on>2026-04-23 07:42:49</sys_updated_on>
         <template><![CDATA[<div class="nx-page">
 
   <!-- NAV -->

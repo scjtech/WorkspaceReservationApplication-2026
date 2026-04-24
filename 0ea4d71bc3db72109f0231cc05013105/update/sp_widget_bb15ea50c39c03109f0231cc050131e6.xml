@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function() {
-  /* widget controller */
+        <client_script><![CDATA[api.controller = function($http) {
   var c = this;
+
+  c.doAction = function(action, sysId) {
+    c.server.update({
+      action: action,
+      sysId: sysId
+    }).then(function() {
+      c.server.refresh();
+    });
+  };
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Share+Tech+Mono&amp;family=DM+Sans:wght@300;400;500&amp;display=swap');&#13;
@@ -192,6 +200,48 @@
 }&#13;
 @media (max-width: 600px) {&#13;
   .nx-res-stats { grid-template-columns: 1fr; }&#13;
+}&#13;
+/* BIGGER TABLE FONTS */&#13;
+.nx-res-table th {&#13;
+  font-size: 0.85rem !important;&#13;
+  letter-spacing: 0.12em !important;&#13;
+}&#13;
+.nx-res-table td { font-size: 1rem !important; }&#13;
+.nx-res-num { font-size: 0.95rem !important; }&#13;
+.nx-res-date { font-size: 0.92rem !important; }&#13;
+.nx-res-location { font-size: 0.95rem !important; }&#13;
+.nx-res-workspace { font-size: 1rem !important; }&#13;
+.nx-res-badge { font-size: 0.78rem !important; }&#13;
+.nx-res-stat-label { font-size: 0.85rem !important; }&#13;
+.nx-res-stat-num { font-size: 2.6rem !important; }&#13;
+&#13;
+/* ACTION BUTTONS */&#13;
+.nx-action-btn {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.72rem; letter-spacing: 0.12em;&#13;
+  text-transform: uppercase; padding: 8px 16px;&#13;
+  border-radius: 3px; border: 1.5px solid;&#13;
+  cursor: pointer; transition: all 0.3s;&#13;
+  background: transparent;&#13;
+}&#13;
+.nx-checkin-btn {&#13;
+  color: #7fffb2; border-color: rgba(127,255,178,0.4);&#13;
+  background: rgba(127,255,178,0.07);&#13;
+}&#13;
+.nx-checkin-btn:hover {&#13;
+  background: rgba(127,255,178,0.15);&#13;
+}&#13;
+.nx-checkout-btn {&#13;
+  color: #ffb899; border-color: rgba(255,184,153,0.4);&#13;
+  background: rgba(255,184,153,0.07);&#13;
+}&#13;
+.nx-checkout-btn:hover {&#13;
+  background: rgba(255,184,153,0.15);&#13;
+}&#13;
+.nx-res-done {&#13;
+  font-family: 'Share Tech Mono', monospace;&#13;
+  font-size: 0.72rem; color: #b87aff;&#13;
+  letter-spacing: 0.1em;&#13;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -209,25 +259,41 @@
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-	data.catalogItemId = '2ab07725c3eb32109f0231cc050131f6';
+
+    data.catalogItemId = '2ab07725c3eb32109f0231cc050131f6';
+
+    // Handle Check In / Check Out actions
+    if (input && input.action && input.sysId) {
+        var gr = new GlideRecord('x_746154_workspa_0_reservation_tracker');
+        if (gr.get(input.sysId)) {
+            if (input.action === 'checkin') {
+                gr.reservation_status = 'checked_in';
+                gr.work_notes = 'User checked in from NexSpace portal.';
+            } else if (input.action === 'checkout') {
+                gr.reservation_status = 'checked_out';
+                gr.work_notes = 'User checked out from NexSpace portal.';
+            }
+            gr.update();
+        }
+    }
 
     // Get logged in user's reservations
     var reservations = [];
-    var gr = new GlideRecord('x_746154_workspa_0_reservation_tracker');
-    gr.addQuery('reserved_for', gs.getUserID());
-    gr.orderByDesc('start_date_time');
-    gr.query();
+    var gr2 = new GlideRecord('x_746154_workspa_0_reservation_tracker');
+    gr2.addQuery('reserved_for', gs.getUserID());
+    gr2.orderByDesc('start_date_time');
+    gr2.query();
 
-    while (gr.next()) {
+    while (gr2.next()) {
         reservations.push({
-            number:            gr.getDisplayValue('number'),
-            workspace:         gr.getDisplayValue('workspace'),
-            status:            gr.getDisplayValue('reservation_status'),
-            state:             gr.getDisplayValue('state'),
-            startDate:         gr.getDisplayValue('start_date_time'),
-            endDate:           gr.getDisplayValue('end_date_time'),
-            location:          gr.getDisplayValue('location'),
-            sysId:             gr.getUniqueValue()
+            number:    gr2.getDisplayValue('number'),
+            workspace: gr2.getDisplayValue('workspace'),
+            status:    gr2.getDisplayValue('reservation_status'),
+            state:     gr2.getDisplayValue('state'),
+            startDate: gr2.getDisplayValue('start_date_time'),
+            endDate:   gr2.getDisplayValue('end_date_time'),
+            location:  gr2.getDisplayValue('location'),
+            sysId:     gr2.getUniqueValue()
         });
     }
 
@@ -238,11 +304,12 @@
     // Count by status
     var active = 0, completed = 0, cancelled = 0;
     for (var i = 0; i < reservations.length; i++) {
-        var s = reservations[i].status.toLowerCase().replace(/ /g, '_');
-        if (s === 'pending_check_in' || s === 'checked_in') active++;
-        else if (s === 'checked_out') completed++;
-        else if (s === 'cancelled' || s === 'no_show') cancelled++;
+        var s = reservations[i].status;
+        if (s === 'Pending Check-In' || s === 'Checked-In') active++;
+        else if (s === 'Checked-Out') completed++;
+        else if (s === 'Cancelled' || s === 'No-Show') cancelled++;
     }
+
     data.activeCount    = active;
     data.completedCount = completed;
     data.cancelledCount = cancelled;
@@ -253,14 +320,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-04-13 06:12:07</sys_created_on>
         <sys_id>bb15ea50c39c03109f0231cc050131e6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>NexSpace My Reservations</sys_name>
         <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
         <sys_policy/>
         <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
         <sys_update_name>sp_widget_bb15ea50c39c03109f0231cc050131e6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-13 06:26:53</sys_updated_on>
+        <sys_updated_on>2026-04-24 00:42:22</sys_updated_on>
         <template><![CDATA[<div class="nx-page">
 
   <!-- NAV -->
@@ -324,32 +391,49 @@
       <table class="nx-res-table">
         <thead>
           <tr>
-            <th>Number</th>
-            <th>Workspace</th>
-            <th>Status</th>
-            <th>Start Date/Time</th>
-            <th>End Date/Time</th>
-            <th>Location</th>
-          </tr>
+  <th>Number</th>
+  <th>Workspace</th>
+  <th>Status</th>
+  <th>Start Date/Time</th>
+  <th>End Date/Time</th>
+  <th>Location</th>
+  <th>Actions</th>
+</tr>
         </thead>
         <tbody>
           <tr ng-repeat="res in data.reservations" class="nx-res-row">
-            <td>
-              <a href="/nexspace?id=form&table=x_746154_workspa_0_reservation_tracker&sys_id={{res.sysId}}"
-                 class="nx-res-num">{{res.number}}</a>
-            </td>
-            <td class="nx-res-workspace">{{res.workspace}}</td>
-            <td>
-              <span class="nx-res-badge" ng-class="{
-                'nx-badge-av':  res.status === 'Pending Check-In' || res.status === 'Checked-In',
-                'nx-badge-un':  res.status === 'No-Show' || res.status === 'Cancelled',
-                'nx-badge-done':res.status === 'Checked-Out'
-              }">{{res.status}}</span>
-            </td>
-            <td class="nx-res-date">{{res.startDate}}</td>
-            <td class="nx-res-date">{{res.endDate}}</td>
-            <td class="nx-res-location">{{res.location}}</td>
-          </tr>
+  <td>
+    <a href="/nexspace?id=form&table=x_746154_workspa_0_reservation_tracker&sys_id={{res.sysId}}"
+       class="nx-res-num">{{res.number}}</a>
+  </td>
+  <td class="nx-res-workspace">{{res.workspace}}</td>
+  <td>
+    <span class="nx-res-badge" ng-class="{
+      'nx-badge-av':  res.status === 'Pending Check-In' || res.status === 'Checked-In',
+      'nx-badge-un':  res.status === 'No-Show' || res.status === 'Cancelled',
+      'nx-badge-done':res.status === 'Checked-Out'
+    }">{{res.status}}</span>
+  </td>
+  <td class="nx-res-date">{{res.startDate}}</td>
+  <td class="nx-res-date">{{res.endDate}}</td>
+  <td class="nx-res-location">{{res.location}}</td>
+  <td>
+    <button class="nx-action-btn nx-checkin-btn"
+            ng-if="res.status === 'Pending Check-In'"
+            ng-click="c.doAction('checkin', res.sysId)">
+      Check In
+    </button>
+    <button class="nx-action-btn nx-checkout-btn"
+            ng-if="res.status === 'Checked-In'"
+            ng-click="c.doAction('checkout', res.sysId)">
+      Check Out
+    </button>
+    <span class="nx-res-done"
+          ng-if="res.status === 'Checked-Out'">
+      ✓ Complete
+    </span>
+  </td>
+</tr>
         </tbody>
       </table>
     </div>
