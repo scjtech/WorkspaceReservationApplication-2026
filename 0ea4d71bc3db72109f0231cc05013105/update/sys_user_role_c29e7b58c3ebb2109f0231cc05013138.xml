@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description/>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>mRxMZiwAfp5wPlFsdlnt7R8YAOVuF7ibctsY1bJQX7k=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_746154_workspa_0.workspace_maintenance_user</name>

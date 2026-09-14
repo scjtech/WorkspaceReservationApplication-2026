@@ -9,7 +9,7 @@
         <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
         <sys_policy/>
         <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
-        <sys_ui_action display_value="">76bec9d1c32fb2109f0231cc0501314e</sys_ui_action>
+        <sys_ui_action display_value="Maintenance ">76bec9d1c32fb2109f0231cc0501314e</sys_ui_action>
         <sys_update_name>sys_ui_action_role_d4ce0dd1c32fb2109f0231cc0501310d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-03-09 20:06:20</sys_updated_on>

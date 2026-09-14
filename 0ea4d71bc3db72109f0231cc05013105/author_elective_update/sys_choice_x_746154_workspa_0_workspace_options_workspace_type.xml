@@ -6,7 +6,6 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2026-03-04 00:52:30</sys_created_on>
-            <sys_id>f95d9f17c31f72109f0231cc050131a8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>workspace_type</sys_name>
             <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
@@ -30,7 +29,6 @@
             <sys_created_on>2026-03-04 00:53:03</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>ac6ddf17c31f72109f0231cc050131f8</sys_id>
             <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-03-04 01:15:00</sys_updated_on>
@@ -50,7 +48,6 @@
             <sys_created_on>2026-03-04 00:52:30</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>a55d9f17c31f72109f0231cc050131a8</sys_id>
             <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-03-04 01:14:55</sys_updated_on>
@@ -70,7 +67,6 @@
             <sys_created_on>2026-03-04 00:56:37</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>8bad9757c31f72109f0231cc0501315a</sys_id>
             <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-03-04 01:14:47</sys_updated_on>
@@ -90,7 +86,6 @@
             <sys_created_on>2026-03-04 00:57:00</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>df4ed397c31f72109f0231cc050131e6</sys_id>
             <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-03-04 01:15:05</sys_updated_on>

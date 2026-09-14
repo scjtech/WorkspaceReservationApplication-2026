@@ -39,6 +39,7 @@
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="sc_req_item">sc_req_item</reference>
         <reference_cascade_rule/>
@@ -52,7 +53,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-06 01:17:53</sys_created_on>
-        <sys_id>4b85f18cc3eb32109f0231cc05013113</sys_id>
         <sys_name>Request Number</sys_name>
         <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
         <sys_policy/>

@@ -5,6 +5,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <category display_value="Import on Demand">56331e33c3ffb2109f0231cc05013194</category>
+        <cc_render_type>system</cc_render_type>
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
@@ -61,6 +62,7 @@
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
+        <secondary_owners/>
         <short_description>Easily upload Excel files for workspace options import into ServiceNow</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>

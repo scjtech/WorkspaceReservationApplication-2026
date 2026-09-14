@@ -7,7 +7,7 @@
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
-        <cat_item display_value="Workspace Reservation Request">2ab07725c3eb32109f0231cc050131f6</cat_item>
+        <cat_item display_value="NexSpace Workspace Reservation">2ab07725c3eb32109f0231cc050131f6</cat_item>
         <cat_variable>IO:e5e2c8f9c32f32109f0231cc05013144</cat_variable>
         <condition/>
         <description/>

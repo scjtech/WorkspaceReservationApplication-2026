@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
     <sc_cat_item_catalog action="INSERT_OR_UPDATE">
-        <sc_cat_item display_value="Workspace Option Updates">10c4913fc37fb2109f0231cc05013133</sc_cat_item>
+        <sc_cat_item display_value="Workspace Options Import">10c4913fc37fb2109f0231cc05013133</sc_cat_item>
         <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
         <sys_class_name>sc_cat_item_catalog</sys_class_name>
         <sys_created_by>admin</sys_created_by>

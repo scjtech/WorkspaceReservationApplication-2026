@@ -8,7 +8,7 @@
         <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
         <collection>sc_req_item</collection>
         <condition table="sc_req_item">state=3^cat_item=2ab07725c3eb32109f0231cc050131f6^EQ<item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="3"/>
-            <item display_table="sc_cat_item" display_value="Workspace Reservation Request" endquery="false" field="cat_item" goto="false" newquery="false" operator="=" or="false" value="2ab07725c3eb32109f0231cc050131f6"/>
+            <item display_table="sc_cat_item" display_value="NexSpace Workspace Reservation" endquery="false" field="cat_item" goto="false" newquery="false" operator="=" or="false" value="2ab07725c3eb32109f0231cc050131f6"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>

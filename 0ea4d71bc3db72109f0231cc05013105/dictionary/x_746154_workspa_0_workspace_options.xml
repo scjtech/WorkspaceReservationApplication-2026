@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="cde65bdbc3db72109f0231cc050131c6" label="Workspace Options" max_length="40" name="x_746154_workspa_0_workspace_options" type="collection">
+        <element choice="1" label="Workspace Type" max_length="40" name="workspace_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Collaboration Space" sequence="30" value="collaboration_space"/>
+                <element inactive_on_update="false" label="Focus Room" sequence="20" value="focus_room"/>
+                <element inactive_on_update="false" label="Hot Desk" sequence="10" value="hot_desk"/>
+                <element inactive_on_update="false" label="Meeting Room" sequence="40" value="meeting_room"/>
+            </choice>
+        </element>
+        <element label="Image" max_length="40" name="image" type="user_image"/>
+        <element label="Workspace Description" max_length="1000" name="workspace_description" type="string"/>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element label="Max Occupancy" max_length="40" name="max_occupancy" type="integer"/>
+        <element label="Workspace Name" max_length="1000" name="workspace_name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Under Maintenance" sequence="30" value="under_maintenance"/>
+                <element inactive_on_update="false" label="Available" sequence="10" value="available"/>
+                <element inactive_on_update="false" label="Decommissioned" sequence="40" value="decommissioned"/>
+                <element inactive_on_update="false" label="Unavailable" sequence="20" value="unavailable"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="location"/>
+        </index>
+    </element>
+</database>

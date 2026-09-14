@@ -21,6 +21,8 @@
         <report/>
         <require_confirmation>true</require_confirmation>
         <roles>x_746154_workspa_0.wrm_user</roles>
+        <route/>
+        <screen/>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-07 04:57:01</sys_created_on>
@@ -39,6 +41,7 @@
         <timeline_page/>
         <title>My Reservations</title>
         <uncancelable>false</uncancelable>
+        <ux_list/>
         <view_name/>
         <window_name/>
     </sys_app_module>

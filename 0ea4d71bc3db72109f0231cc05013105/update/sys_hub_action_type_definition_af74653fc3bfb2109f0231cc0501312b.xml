@@ -293,6 +293,7 @@
         <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -376,6 +377,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -460,6 +462,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -568,6 +571,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -652,6 +656,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -739,6 +744,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -826,6 +832,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -913,6 +920,7 @@
         <order>3</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1083,17 +1091,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Import Workspace Options On Demand">af74653fc3bfb2109f0231cc0501312b</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"acfbe9bbc3ffb2109f0231cc05013154","name":"plan","plan_signature":null}}</plan>
-        <snapshot>c0a507b7c3f7f2109f0231cc050131c4</snapshot>
+        <snapshot>85f9037fc3f7f2109f0231cc05013149</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-30 02:25:25</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>acfbe9bbc3ffb2109f0231cc05013154</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-30 08:57:16</sys_updated_on>
+        <sys_updated_on>2026-03-30 09:16:10</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1373,6 +1381,7 @@
         <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1456,6 +1465,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1540,6 +1550,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1648,6 +1659,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1732,6 +1744,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1819,6 +1832,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1906,6 +1920,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1993,6 +2008,7 @@
         <order>3</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>

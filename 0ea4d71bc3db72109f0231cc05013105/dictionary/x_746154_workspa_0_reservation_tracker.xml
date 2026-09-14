@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="f2e13548c3eb32109f0231cc0501312a" extends="task" label="Reservation Tracker" max_length="40" name="x_746154_workspa_0_reservation_tracker" type="collection">
+        <element choice="1" label="Reservation Status" max_length="40" name="reservation_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending Check-In" sequence="10" value="pending_check_in"/>
+                <element inactive_on_update="false" label="Checked-Out" sequence="30" value="checked_out"/>
+                <element inactive_on_update="false" label="No-Show" sequence="50" value="no_show"/>
+                <element inactive_on_update="false" label="Checked-In" sequence="20" value="checked_in"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="40" value="cancelled"/>
+            </choice>
+        </element>
+        <element label="Request Number" max_length="32" name="request_number" reference="sc_req_item" type="reference"/>
+        <element label="Start Date/Time" max_length="40" name="start_date_time" type="glide_date_time"/>
+        <element label="Reserved for" max_length="32" name="reserved_for" reference="sys_user" type="reference"/>
+        <element label="Workspace" max_length="32" name="workspace" reference="x_746154_workspa_0_workspace_options" type="reference"/>
+        <element label="Additional Notes" max_length="1000" name="additional_notes" type="string"/>
+        <element label="End Date/Time" max_length="40" name="end_date_time" type="glide_date_time"/>
+    </element>
+</database>

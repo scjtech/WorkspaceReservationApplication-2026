@@ -1,60 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_choice action="INSERT_OR_UPDATE" field="ticket_status" table="x_746154_workspa_0_workspace_maintenance" version="3">
+    <sys_choice action="INSERT_OR_UPDATE" field="workspace_status" table="x_746154_workspa_0_workspace_maintenance" version="3">
         <sys_choice_set action="INSERT_OR_UPDATE">
-            <element>ticket_status</element>
+            <element>workspace_status</element>
             <name>x_746154_workspa_0_workspace_maintenance</name>
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-07 06:12:27</sys_created_on>
-            <sys_id>2953c0ecc3ebb2109f0231cc050131c1</sys_id>
+            <sys_created_on>2026-03-07 06:10:02</sys_created_on>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>ticket_status</sys_name>
+            <sys_name>workspace_status</sys_name>
             <sys_package display_value="Workspace Reservation Management" source="x_746154_workspa_0">0ea4d71bc3db72109f0231cc05013105</sys_package>
             <sys_policy/>
             <sys_scope display_value="Workspace Reservation Management">0ea4d71bc3db72109f0231cc05013105</sys_scope>
-            <sys_update_name>sys_choice_x_746154_workspa_0_workspace_maintenance_ticket_status</sys_update_name>
+            <sys_update_name>sys_choice_x_746154_workspa_0_workspace_maintenance_workspace_status</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-07 06:12:27</sys_updated_on>
+            <sys_updated_on>2026-03-07 06:10:02</sys_updated_on>
         </sys_choice_set>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>ticket_status</element>
+            <element>workspace_status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Open</label>
+            <label>In maintenance</label>
             <language>en</language>
             <name>x_746154_workspa_0_workspace_maintenance</name>
             <sequence>10</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-07 06:12:27</sys_created_on>
+            <sys_created_on>2026-03-07 06:10:02</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>40530420c32fb2109f0231cc05013142</sys_id>
             <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-07 06:12:34</sys_updated_on>
-            <value>open</value>
+            <sys_updated_on>2026-03-07 06:10:22</sys_updated_on>
+            <value>in_maintenance</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
-            <element>ticket_status</element>
+            <element>workspace_status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Closed</label>
+            <label>Available</label>
             <language>en</language>
             <name>x_746154_workspa_0_workspace_maintenance</name>
             <sequence>20</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-03-07 06:12:38</sys_created_on>
+            <sys_created_on>2026-03-07 06:10:33</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>65530420c32fb2109f0231cc05013146</sys_id>
             <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-03-07 06:12:46</sys_updated_on>
-            <value>closed</value>
+            <sys_updated_on>2026-03-07 06:10:42</sys_updated_on>
+            <value>available</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>workspace_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Decommissioned</label>
+            <language>en</language>
+            <name>x_746154_workspa_0_workspace_maintenance</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-07 06:10:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-07 06:10:59</sys_updated_on>
+            <value>decommissioned</value>
         </sys_choice>
     </sys_choice>
 </record_update>

@@ -5,6 +5,7 @@
         <availability>on_desktop</availability>
         <billable>false</billable>
         <category display_value="Workspace Reservations">fe64f1d5c3efb2109f0231cc0501317b</category>
+        <cc_render_type>system</cc_render_type>
         <checked_out/>
         <cost>0</cost>
         <custom_cart/>
@@ -58,6 +59,7 @@
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
+        <secondary_owners/>
         <short_description>Reserve a hot desk, focus room, meeting room, or collaboration space. Select your preferred workspace, date, and time to get started.</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>

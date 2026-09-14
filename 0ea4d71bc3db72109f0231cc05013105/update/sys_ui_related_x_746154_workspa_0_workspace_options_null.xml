@@ -2,6 +2,7 @@
     <sys_ui_related sys_domain="global" table="x_746154_workspa_0_workspace_options" version="2" view="">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
+            <group_by_field/>
             <list_id display_value="Workspace Options - Default view" name="x_746154_workspa_0_workspace_options" related_list="NULL" sys_domain="global" view="Default view">2f6020c9c3e372109f0231cc050131b3</list_id>
             <order_by/>
             <position>0</position>
@@ -16,6 +17,7 @@
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
+            <group_by_field/>
             <list_id display_value="Workspace Options - Default view" name="x_746154_workspa_0_workspace_options" related_list="NULL" sys_domain="global" view="Default view">2f6020c9c3e372109f0231cc050131b3</list_id>
             <order_by/>
             <position>1</position>

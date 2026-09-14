@@ -245,6 +245,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="sys_user">sys_user</reference>
         <reference_cascade_rule/>
@@ -328,6 +329,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="x_746154_workspa_0_workspace_options">x_746154_workspa_0_workspace_options</reference>
         <reference_cascade_rule/>
@@ -414,6 +416,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="x_746154_workspa_0_workspace_options">x_746154_workspa_0_workspace_options</reference>
         <reference_cascade_rule/>
@@ -498,6 +501,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="sys_user">sys_user</reference>
         <reference_cascade_rule/>
@@ -585,6 +589,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -672,6 +677,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -819,17 +825,17 @@ gs.error('Discord error: ' + ex.message);&#13;
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Send Discord Rejection Notification">8327f02ac3b332109f0231cc050131b1</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"b0bff0e2c3f332109f0231cc05013128","name":"plan","plan_signature":null}}</plan>
-        <snapshot>bca6383ac3f772109f0231cc050131eb</snapshot>
+        <snapshot>2a98b8fac3f772109f0231cc05013164</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-03-26 01:59:43</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b0bff0e2c3f332109f0231cc05013128</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-03-26 19:58:37</sys_updated_on>
+        <sys_updated_on>2026-03-26 20:07:11</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1073,6 +1079,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="x_746154_workspa_0_workspace_options">x_746154_workspa_0_workspace_options</reference>
         <reference_cascade_rule/>
@@ -1156,6 +1163,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="sys_user">sys_user</reference>
         <reference_cascade_rule/>
@@ -1242,6 +1250,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="x_746154_workspa_0_workspace_options">x_746154_workspa_0_workspace_options</reference>
         <reference_cascade_rule/>
@@ -1326,6 +1335,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="sys_user">sys_user</reference>
         <reference_cascade_rule/>
@@ -1413,6 +1423,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1500,6 +1511,7 @@ gs.error('Discord error: ' + ex.message);&#13;
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>

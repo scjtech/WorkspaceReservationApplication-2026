@@ -2,6 +2,7 @@
     <sys_ui_related sys_domain="global" table="x_746154_workspa_0_reservation_tracker" version="2" view="">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
+            <group_by_field/>
             <list_id display_value="Reservation Tracker - Default view" name="x_746154_workspa_0_reservation_tracker" related_list="NULL" sys_domain="global" view="Default view">20982cc5c32772109f0231cc050131fe</list_id>
             <order_by/>
             <position>0</position>

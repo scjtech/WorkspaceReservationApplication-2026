@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="defd7f18c3ebb2109f0231cc050131d0" label="Workspace Maintenance" max_length="40" name="x_746154_workspa_0_workspace_maintenance" type="collection">
+        <element label="Workspace" mandatory="true" max_length="32" name="workspace" reference="x_746154_workspa_0_workspace_options" type="reference"/>
+        <element choice="1" label="Workspace Status" mandatory="true" max_length="40" name="workspace_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Decommissioned" sequence="30" value="decommissioned"/>
+                <element inactive_on_update="false" label="Available" sequence="20" value="available"/>
+                <element inactive_on_update="false" label="In maintenance" sequence="10" value="in_maintenance"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Reservation" mandatory="true" max_length="32" name="reservation" reference="x_746154_workspa_0_reservation_tracker" type="reference"/>
+        <element label="Work Performed" max_length="1000" name="work_performed" type="string"/>
+        <element label="Date Reported" mandatory="true" max_length="40" name="date_reported" type="glide_date"/>
+        <element choice="1" label="Ticket Status" mandatory="true" max_length="40" name="ticket_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Open" sequence="10" value="open"/>
+                <element inactive_on_update="false" label="Closed" sequence="20" value="closed"/>
+            </choice>
+        </element>
+        <element label="Assigned to" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Issue Description" mandatory="true" max_length="1000" name="issue_description" type="string"/>
+        <element label="Assignment Group" max_length="32" name="assignment_group" reference="sys_user_group" type="reference"/>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+        <index name="index2">
+            <element name="assignment_group"/>
+        </index>
+        <index name="index3">
+            <element name="reservation"/>
+        </index>
+        <index name="index4">
+            <element name="workspace"/>
+        </index>
+    </element>
+</database>
